@@ -1,0 +1,21 @@
+{
+  "name": "My Translation",
+  "version": "1.1",
+  "description": "Translate English to Chinese",
+ "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/",
+    "file:///*/*",
+    "https://*.google.com/",
+    "https://translate.yandex.net/"
+],
+
+  "browser_action": {
+      "default_title": "Translation",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
