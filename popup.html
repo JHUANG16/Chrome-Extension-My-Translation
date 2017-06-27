@@ -6,25 +6,53 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-        min-height: 200px;
-        min-width: 300px;
+        min-height: 100px;
+        min-width: 589px;
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+      .textArea {
+        width: 250px !important;
+        height:90px !important;
+        padding: 5px !important; 
+        margin: 0px !important;
+        text-align: left;
       }
-      #translateBtn{
-        float:top;
-        margin:0 0 0 0;
+      .inline-div{
+        display: inline-block;
       }
+      .buttonGroup{
+        vertical-align: top;
+        margin-top: 15px;
+      }
+      .btn{
+        width:78px;
+      }
+      
+      ::-webkit-input-placeholder {
+          color: #C7C7CD !important;
+          padding-top: 23px;
+          text-align: center;
+      }
+      :-moz-placeholder {
+          /* Firefox 18- */
+          color: #C7C7CD !important;
+          padding-top: 23px;
+          text-align: center;
+      }
+      ::-moz-placeholder {
+          /* Firefox 19+ */
+          padding-top: 23px;
+          color: #C7C7CD !important;
+          text-align: center;
+      }
+      :-ms-input-placeholder {
+          padding-top: 23px;
+          color: #C7C7CD !important;
+          text-align: center;
+      }
+
     </style>
     <script src="popup.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css">    
@@ -33,11 +61,20 @@
     <script src="bootstrap.min.js"></script>
   </head>
   <body>
-  <div class="form-group">
-    <textarea class="form-control" id="exampleTextarea" rows= "3"></textarea>
+  <div class="inline-div">
+    <textarea class="form-control textArea" placeholder="Enter Text" id="inputTextArea" rows= "3"></textarea>
   </div>
-  <button type="button" class="btn btn-secondary" id="translateBtn">Translate</button>
-  <div id = "result"></div>
+  <div class="inline-div buttonGroup" >
+    <div>
+      <button type="button" class="btn btn-outline-primary btn-sm" id="translateBtn">Translate</button>
+    </div>
+    <div>
+      <button type="button" class="btn btn-outline-danger btn-sm" id="clearBtn" style="margin-top:10px; ">Clear</button>
+    </div>
+  </div>
+  <div class="inline-div">
+    <textarea class="form-control textArea" placeholder="Translate" id="outputTestArea" rows= "3"></textarea>
+  </div>
   </body>
 </html>
 

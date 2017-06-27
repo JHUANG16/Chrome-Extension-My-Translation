@@ -12,7 +12,7 @@
 ],
 
   "browser_action": {
-      "default_title": "Translation",
+      "default_title": "Translate English to Chinese",
       "default_icon": "icon.png",
       "default_popup": "popup.html"
   },
